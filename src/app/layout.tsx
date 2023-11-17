@@ -6,11 +6,11 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Admin dashboard',
-  description: 'manage your finances',
+  description: 'manage your finances'
 }
 
-export default function RootLayout({
-  children,
+export default function RootLayout ({
+  children
 }: {
   children: React.ReactNode
 }) {

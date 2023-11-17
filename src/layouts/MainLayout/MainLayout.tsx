@@ -1,5 +1,5 @@
 interface Props {
-    children: React.ReactNode
+  children: React.ReactNode
 }
 export const MainLayout: React.FC<Props> = ({ children }) => {
   return (
