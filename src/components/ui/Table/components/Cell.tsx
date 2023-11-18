@@ -10,7 +10,7 @@ export const Cell: React.FC<Props> = ({ children, as = 'default' }) => {
 
   return (
         <CellComponent>
-            <div className='h-full flex items-center gap-1 hover:bg-backgroundHover'>
+            <div className='h-full flex items-center gap-1 p-0'>
                 {children}
             </div>
         </CellComponent>

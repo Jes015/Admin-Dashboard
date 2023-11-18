@@ -1,5 +1,5 @@
-import { TableBody, TableHeader, TableRoot, TableRow } from '@radix-ui/themes'
-import { Cell } from './components'
+import { TableBody, TableHeader, TableRoot } from '@radix-ui/themes'
+import { Cell, Row } from './components'
 
 interface Props {
   children: React.ReactNode
@@ -15,4 +15,4 @@ Table.Root = Table
 Table.Cell = Cell
 Table.Header = TableHeader
 Table.Body = TableBody
-Table.Row = TableRow
+Table.Row = Row
