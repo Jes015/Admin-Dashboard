@@ -5,7 +5,7 @@ export const UserDropdownMenu = () => {
   return (
     <DropdownMenu.Root>
         <DropdownMenu.Trigger>
-            <Button size='2' className='cursor-pointer hover:bg-backgroundHover rounded-sm'>
+            <Button size='2' variant='soft' className='cursor-pointer hover:bg-backgroundHover rounded-sm'>
                 <PersonIcon className='w-5 h-5' />
             </Button>
         </DropdownMenu.Trigger>

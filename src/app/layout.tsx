@@ -18,7 +18,7 @@ export default function RootLayout ({
   return (
     <html lang="en">
       <body className={[inter.className, 'dark'].join(' ')}>
-        <Theme appearance="dark" accentColor="red" grayColor="mauve" radius="small">
+        <Theme appearance="dark" accentColor="indigo" grayColor="mauve" radius="small">
           <MainLayout>
             {children}
           </MainLayout>
