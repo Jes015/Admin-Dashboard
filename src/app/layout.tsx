@@ -1,4 +1,5 @@
 import { inter } from '@/assets'
+import { MainLayout } from '@/layouts'
 import { Theme } from '@radix-ui/themes'
 import '@radix-ui/themes/styles.css'
 import type { Metadata } from 'next'
@@ -16,9 +17,11 @@ export default function RootLayout ({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={[inter.className, 'dark'].join(' ')}>
         <Theme appearance="dark" accentColor="red" grayColor="mauve" radius="small">
-          {children}
+          <MainLayout>
+            {children}
+          </MainLayout>
         </Theme>
       </body>
     </html>
