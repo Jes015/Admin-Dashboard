@@ -1,5 +1,5 @@
 import { type Icon } from '@/models'
-import { Card } from '@radix-ui/themes'
+import { Badge, Card } from '@radix-ui/themes'
 
 interface Props {
   Icon: Icon
@@ -10,12 +10,12 @@ interface Props {
 
 export const CardInfo: React.FC<Props> = ({ Icon, message, digits, title }) => {
   return (
-    <Card className='bg-primaryBackground border-line rounded-sm p-2 flex-grow hover:bg-backgroundHover'>
+    <Card className='bg-primaryBackground border-line rounded-sm px-2 py-1 flex-grow hover:bg-backgroundHover cursor-default'>
       <div className='flex flex-row items-start gap-[0.6rem]'>
         <div>
           <Icon className='w-5 h-5 text-icon' />
         </div>
-        <div className='flex flex-col gap-[0.1rem] flex-grow font-bold'>
+        <div className='flex flex-col gap-[0.3rem] flex-grow font-bold'>
           <header className='text-sm'>
             {title}
           </header>
@@ -23,7 +23,9 @@ export const CardInfo: React.FC<Props> = ({ Icon, message, digits, title }) => {
             {digits}
           </div>
           <footer className='text-xs text-tsecondary'>
-            {message}
+            <Badge color='indigo'>
+              {message}
+            </Badge>
           </footer>
         </div>
       </div>
