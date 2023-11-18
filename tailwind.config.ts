@@ -15,11 +15,13 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       },
       colors: {
+        primaryBackground: '#1a191b',
         line: 'rgba(159, 166, 173, 0.16)',
         tsecondary: 'rgb(185,185,185)',
-        backgroundHoverLink: 'rgb(201 201 201 / .06)',
-        backgroundCurrentLink: 'rgb(221 221 221 / .1)',
-        backgroundCurrentLinkHover: 'rgb(221 221 221 / .15)'
+        icon: 'rgb(145,145,145)',
+        backgroundHover: 'rgb(201 201 201 / .06)',
+        backgroundCurrent: 'rgb(221 221 221 / .1)',
+        backgroundCurrentHover: 'rgb(221 221 221 / .15)'
       }
     }
   },

@@ -1,7 +1,6 @@
 'use client'
 import { useRouting } from '@/hooks'
 import { sideBarSections } from '@/layouts/MainLayout/components/SideBar/models'
-import { Box } from '@radix-ui/themes'
 import Link from 'next/link'
 
 export const SideBarContent = () => {
@@ -17,18 +16,17 @@ export const SideBarContent = () => {
               {section.routes.map((route) => (
                 <li key={route.name}>
                   <Link href={route.path}>
-                    <Box
+                    <div
                       className={
                         [
-                          '[transition:background_ease_0.3s]',
-                          'text-sm flex items-center gap-2 p-3 rounded-md hover:[transition:background_ease_0.2s]',
-                          currentPathname === route.path ? 'bg-backgroundCurrentLink hover:bg-backgroundCurrentLinkHover' : 'hover:bg-backgroundHoverLink'
+                          '[font-weight:500] text-sm flex items-center gap-2 p-3 rounded-md [transition:background_ease_0.3s] hover:[transition:background_ease_0.2s]',
+                          currentPathname === route.path ? 'bg-backgroundCurrent hover:bg-backgroundCurrentHover' : 'hover:bg-backgroundHover'
                         ].join(' ')
                       }
                     >
-                      <route.Icon />
+                      <route.Icon className='text-icon' />
                       {route.name}
-                    </Box>
+                    </div>
                   </Link>
                 </li>
               ))}

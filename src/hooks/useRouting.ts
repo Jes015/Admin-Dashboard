@@ -4,5 +4,7 @@ import { usePathname } from 'next/navigation'
 export const useRouting = () => {
   const currentPathname = usePathname()
 
-  return { currentPathname }
+  const currentPathnameFormatted = currentPathname.slice(1)
+
+  return { currentPathname, currentPathnameFormatted }
 }

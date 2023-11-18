@@ -1,14 +1,10 @@
 import { SideBarContent, SideBarHeader } from './components'
 
-interface Props {
-  className: string
-}
-
-export const SideBar: React.FC<Props> = ({ className }) => {
+export const SideBar = () => {
   return (
-    <div {...{ className }}>
+    <aside className='bg-primaryBackground [flex-grow:1] border-r [height:100svh] border-line p-2 w-full [max-width:16rem]'>
       <SideBarHeader />
       <SideBarContent />
-    </div>
+    </aside>
   )
 }
