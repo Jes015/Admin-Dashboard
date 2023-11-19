@@ -9,7 +9,7 @@ export const Sheet: React.FC<Props> = ({ children, className, as }) => {
   return (
     <SheetRootComponent
         className={[
-          'bg-primaryBackground border border-line rounded-md p-2',
+          'bg-primaryBackground border border-line rounded-md p-2 relative',
           className
         ].join(' ')}
     >
