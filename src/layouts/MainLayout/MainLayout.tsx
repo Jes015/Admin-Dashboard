@@ -5,11 +5,13 @@ interface Props {
 }
 export const MainLayout: React.FC<Props> = ({ children }) => {
   return (
-    <div className='flex flex-row p-3 [height:100vh]'>
-      <SideBar/>
-      <div className='[flex-grow:10] pl-3 flex flex-col gap-3 w-full'>
+    <div className='flex flex-row [height:100vh]'>
+      <div className='[flex-grow:1] [max-width:16rem] w-full p-3 pr-0'>
+        <SideBar/>
+      </div>
+      <div className='[flex-grow:10] p-3 flex flex-col gap-3 w-full overflow-y-auto'>
         <Header/>
-        <main className='flex-grow h-full overflow-y-auto'>
+        <main className='flex-grow h-full'>
           {children}
         </main>
       </div>

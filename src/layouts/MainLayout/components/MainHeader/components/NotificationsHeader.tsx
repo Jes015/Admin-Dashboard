@@ -1,13 +1,13 @@
 import { ChatBubbleIcon } from '@radix-ui/react-icons'
-import { Button, Popover, Text } from '@radix-ui/themes'
+import { IconButton, Popover, Text } from '@radix-ui/themes'
 
 export const NotificationsHeader = () => {
   return (
         <Popover.Root>
             <Popover.Trigger>
-                <Button size='2' className='cursor-pointer hover:bg-backgroundHover rounded-sm'>
+                <IconButton size='2' className='cursor-pointer hover:bg-backgroundHover rounded-full'>
                     <ChatBubbleIcon width="16" height="16" />
-                </Button>
+                </IconButton>
             </Popover.Trigger>
             <Popover.Content style={{ width: 360 }}>
                 <header>

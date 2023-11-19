@@ -1,15 +1,15 @@
-import { CardsSection, ChartsSection, LatestTransactionsSection } from './components'
+import { CardsAnalyticsInfoSection, ChartsSection, LatestTransactionsSection, RightDashboardBar } from './components'
 
 const DashboardPage = () => {
   return (
-    <div className='flex gap-1 h-full'>
-      <div className='flex flex-col gap-3 [flex-grow:1] h-full'>
-        <CardsSection />
+    <div className='flex gap-3 h-full'>
+      <div className='flex flex-col gap-3 [flex-grow:5] w-full h-full'>
+        <CardsAnalyticsInfoSection />
         <LatestTransactionsSection />
         <ChartsSection />
       </div>
-      <div className='[flex-grow:0.8]'>
-        lsdkfj
+      <div className='[flex-grow:1] overflow-hidden'>
+        <RightDashboardBar />
       </div>
     </div>
   )

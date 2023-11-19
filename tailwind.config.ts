@@ -21,7 +21,8 @@ const config: Config = {
         icon: 'rgb(145,145,145)',
         backgroundHover: 'rgb(201 201 201 / .06)',
         backgroundCurrent: 'rgb(221 221 221 / .1)',
-        backgroundCurrentHover: 'rgb(221 221 221 / .15)'
+        backgroundCurrentHover: 'rgb(221 221 221 / .15)',
+        link: '#b1a9ff'
       }
     }
   },
