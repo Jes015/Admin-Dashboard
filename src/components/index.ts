@@ -1,1 +1,1 @@
-export * from './ui/Table/Table'
+export * from './ui'

@@ -1,3 +1,4 @@
 export * from './CardsSection'
-export * from './LatestTransactions'
+export * from './ChartsSection'
+export * from './LatestTransactionsSection/LatestTransactionsSection'
 

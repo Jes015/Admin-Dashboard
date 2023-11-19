@@ -1,11 +1,12 @@
-import { CardsSection, LatestTransactions } from './components'
+import { CardsSection, ChartsSection, LatestTransactionsSection } from './components'
 
 const DashboardPage = () => {
   return (
-    <div className='flex gap-1'>
-      <div className='flex flex-col gap-3 [flex-grow:1]'>
+    <div className='flex gap-1 h-full'>
+      <div className='flex flex-col gap-3 [flex-grow:1] h-full'>
         <CardsSection />
-        <LatestTransactions />
+        <LatestTransactionsSection />
+        <ChartsSection />
       </div>
       <div className='[flex-grow:0.8]'>
         lsdkfj
