@@ -1,9 +1,16 @@
 .sectionLayout__header {
+    background-color: #1a191bd8;
+    animation: changeBackgroundColor linear forwards;
+    animation-duration: auto;
+    animation-timeline: scroll();
+    animation-range: 0 6rem;
+    border-bottom: 0.1rem solid transparent;
 }
 
 @keyframes changeBackgroundColor {
     to {
-        background-color: var(#1a191b);
-        filter: blur(2px);
+        background-color: #1a191b9a;
+        backdrop-filter: blur(8px);
+        border-bottom-color: rgba(159, 166, 173, 0.16);
     }
 }

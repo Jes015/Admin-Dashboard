@@ -17,7 +17,7 @@ const initialData = [
 export const ChartsSection = () => {
   return (
     <SectionLayout
-      className="flex flex-col gap-5 p-0 [min-height:23.4375rem] overflow-y-auto"
+      className="flex flex-col [min-height:23.4375rem] overflow-y-auto"
       title='Charts'
     >
       <ChartComponent

@@ -10,21 +10,27 @@ interface Props {
 
 export const SectionLayout: React.FC<Props> = ({ className, children, title }) => {
   return (
-        <Sheet
-            as='section'
-            className={className}
-        >
-          <header
-                className={
-                    [
-                      'sticky top-0 bg-red-600 z-10',
-                      styles.sectionLayout__header
-                    ].join(' ')
-                }
-            >
-                <Heading size='4' as='h3'>{title}</Heading>
-            </header>
-          {children}
-        </Sheet>
+    <Sheet
+      as='section'
+      className={[
+        '!p-0',
+        className
+      ].join(' ')
+      }
+    >
+      <header
+        className={
+          [
+            'sticky top-0 p-2 z-10',
+            styles.sectionLayout__header
+          ].join(' ')
+        }
+      >
+        <Heading size='4' as='h3'>{title}</Heading>
+      </header>
+      <div className='p-2 pt-0'>
+        {children}
+      </div>
+    </Sheet>
   )
 }
