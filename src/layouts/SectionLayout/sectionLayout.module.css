@@ -1,0 +1,9 @@
+.sectionLayout__header {
+}
+
+@keyframes changeBackgroundColor {
+    to {
+        background-color: var(#1a191b);
+        filter: blur(2px);
+    }
+}

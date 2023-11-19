@@ -1,12 +1,13 @@
 import { Table } from '@/components'
-import { Avatar, Badge, Heading } from '@radix-ui/themes'
+import { SectionLayout } from '@/layouts'
+import { Avatar, Badge } from '@radix-ui/themes'
 
-export const LatestTransactions = () => {
+export const LatestTransactionsSection = () => {
   return (
-        <section className="bg-primaryBackground border border-line rounded-md p-2 flex flex-col gap-2">
-            <header>
-                <Heading size='4' as='h3'>Latest Transactions</Heading>
-            </header>
+        <SectionLayout
+            className="flex flex-col gap-2 [min-height:23.4375rem] overflow-y-auto"
+            title='Latest Transactions'
+        >
             <Table>
                 <Table.Header>
                     <Table.Row isHeader className='text-tsecondary'>
@@ -18,26 +19,26 @@ export const LatestTransactions = () => {
                 </Table.Header>
                 <Table.Body>
                     {
-                        Array(5).fill(null).map((_, index) => (
+                        Array(15).fill(null).map((_, index) => (
                             <Table.Row key={index}>
                                 <Table.Cell>
-                                        <Avatar fallback="M" size='2' />
-                                        Mario
+                                    <Avatar fallback="M" size='2' />
+                                    Mario
                                 </Table.Cell>
                                 <Table.Cell>
-                                        <Badge color='brown'>Status</Badge>
+                                    <Badge color='brown'>Status</Badge>
                                 </Table.Cell>
                                 <Table.Cell>
-                                        <time dateTime='15/02/2023'>Feb 15</time>
+                                    <time dateTime='15/02/2023'>Feb 15</time>
                                 </Table.Cell>
                                 <Table.Cell>
-                                        12.000
+                                    12.000
                                 </Table.Cell>
                             </Table.Row>
                         ))
                     }
                 </Table.Body>
             </Table>
-        </section>
+        </SectionLayout>
   )
 }
