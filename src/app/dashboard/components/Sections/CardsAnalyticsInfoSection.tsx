@@ -1,22 +1,22 @@
-import { CardInfo } from '@/app/dashboard/components'
+import { AnalyticsInfo } from '@/app/dashboard/components'
 import { PersonIcon } from '@radix-ui/react-icons'
 
-export const CardsSection = () => {
+export const CardsAnalyticsInfoSection = () => {
   return (
-        <section className='flex gap-1'>
-            <CardInfo
+        <section className='flex gap-3'>
+            <AnalyticsInfo
                 title='Users'
                 digits='10.000'
                 Icon={PersonIcon}
                 message='+20.000 users'
             />
-            <CardInfo
+            <AnalyticsInfo
                 title='Users'
                 digits='10.000'
                 Icon={PersonIcon}
                 message='+20.000 users'
             />
-            <CardInfo
+            <AnalyticsInfo
                 title='Users'
                 digits='10.000'
                 Icon={PersonIcon}

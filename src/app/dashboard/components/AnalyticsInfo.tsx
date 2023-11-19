@@ -1,5 +1,6 @@
+import { Sheet } from '@/components'
 import { type Icon } from '@/models'
-import { Badge, Card } from '@radix-ui/themes'
+import { Badge } from '@radix-ui/themes'
 
 interface Props {
   Icon: Icon
@@ -8,9 +9,12 @@ interface Props {
   message: React.ReactNode
 }
 
-export const CardInfo: React.FC<Props> = ({ Icon, message, digits, title }) => {
+export const AnalyticsInfo: React.FC<Props> = ({ Icon, message, digits, title }) => {
   return (
-    <Card className='bg-primaryBackground border-line rounded-sm px-2 py-1 flex-grow hover:bg-backgroundHover cursor-default'>
+    <Sheet
+      as='article'
+      className='!py-3 flex-grow hover:bg-backgroundHover cursor-default'
+    >
       <div className='flex flex-row items-start gap-[0.6rem]'>
         <div>
           <Icon className='w-5 h-5 text-icon' />
@@ -29,6 +33,6 @@ export const CardInfo: React.FC<Props> = ({ Icon, message, digits, title }) => {
           </footer>
         </div>
       </div>
-    </Card>
+    </Sheet>
   )
 }

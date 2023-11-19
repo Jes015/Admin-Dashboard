@@ -74,6 +74,7 @@ export const ChartComponent: React.FC<Props> = props => {
         chart.remove()
       }
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [data, backgroundColor, lineColor, textColor, areaTopColor, areaBottomColor]
   )
 

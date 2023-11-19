@@ -5,7 +5,7 @@ export const SideBar = () => {
   return (
       <Sheet
         as='aside'
-        className='[flex-grow:1] h-full w-full [max-width:16rem] overflow-y-auto'
+        className='h-full w-full overflow-y-auto'
       >
         <SideBarHeader />
         <SideBarContent />
