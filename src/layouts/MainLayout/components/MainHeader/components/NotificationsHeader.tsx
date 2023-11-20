@@ -5,7 +5,7 @@ export const NotificationsHeader = () => {
   return (
         <Popover.Root>
             <Popover.Trigger>
-                <IconButton size='2' className='cursor-pointer hover:bg-backgroundHover rounded-full'>
+                <IconButton variant='soft' size='2' className='cursor-pointer hover:bg-backgroundHover rounded-full'>
                     <ChatBubbleIcon width="16" height="16" />
                 </IconButton>
             </Popover.Trigger>

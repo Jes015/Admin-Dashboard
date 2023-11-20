@@ -1,6 +1,7 @@
 'use client'
 import { useRouting } from '@/hooks'
 import { sideBarSections } from '@/layouts/MainLayout/components/SideBar/models'
+import { Badge } from '@radix-ui/themes'
 import Link from 'next/link'
 
 export const SideBarContent = () => {
@@ -11,7 +12,9 @@ export const SideBarContent = () => {
       {
         sideBarSections.map((section) => (
           <>
-            <span className='text-tsecondary text-xs font-bold'>{section.title}</span>
+          <Badge className='mb-2' color='indigo'>
+            <span>{section.title}</span>
+          </Badge>
             <ul>
               {section.routes.map((route) => (
                 <li key={route.name}>

@@ -27,7 +27,7 @@ export const AnalyticsInfo: React.FC<Props> = ({ Icon, message, digits, title })
             {digits}
           </div>
           <footer className='text-xs text-tsecondary'>
-            <Badge color='indigo'>
+            <Badge>
               {message}
             </Badge>
           </footer>
