@@ -9,7 +9,7 @@ export const Header = () => {
   return (
     <Sheet
       as='header'
-      className='bg-primaryBackground border border-line rounded-md p-3 flex justify-between items-center w-full [min-height:56.08px]'
+      className='rounded-md p-3 flex justify-between items-center w-full [min-height:56.08px]'
     >
       <span className='capitalize text-sm font-bold'>
         <Badge color='orange' size='2'>

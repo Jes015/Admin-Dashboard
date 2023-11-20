@@ -9,7 +9,7 @@ export const UsersSection = () => {
         className='flex gap-2'
       >
         <TextFieldUser />
-        <FilterByCategory />
+        <FilterByCategory label='Holaa' />
       </Sheet>
       <div
         className='grid grid-cols-7 gap-2'
