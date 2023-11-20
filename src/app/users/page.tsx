@@ -1,6 +1,10 @@
+import { UsersSection } from './components'
+
 const DashboardPage = () => {
   return (
-    <div>Dashboard</div>
+    <div>
+      <UsersSection />
+    </div>
   )
 }
 
