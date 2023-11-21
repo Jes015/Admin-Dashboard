@@ -1,4 +1,4 @@
-'use client'
+/* 'use client'
 import { ColorType, createChart, type LineData } from 'lightweight-charts'
 import { useEffect, useRef, type LegacyRef } from 'react'
 
@@ -82,3 +82,4 @@ export const ChartComponent: React.FC<Props> = props => {
         <div className='w-full' ref={chartContainerRef as LegacyRef<HTMLDivElement>} />
   )
 }
+ */

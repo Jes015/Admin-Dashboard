@@ -8,7 +8,9 @@ export const TextFieldUser = () => {
             Icon={MagnifyingGlassIcon}
             label='Search'
             placeholder='La niña, pepe, toro...'
-            onChange={() => {}}
+            inputProps={{
+              onChange: () => {}
+            }}
         />
   )
 }

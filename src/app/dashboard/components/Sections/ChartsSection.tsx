@@ -1,7 +1,7 @@
-import { ChartComponent } from '@/components'
+/* import { ChartComponent } from '@/components' */
 import { SectionLayout } from '@/layouts'
 
-const initialData = [
+/* const initialData = [
   { time: '2018-12-22', value: 32.51 },
   { time: '2018-12-23', value: 31.11 },
   { time: '2018-12-24', value: 27.02 },
@@ -12,7 +12,7 @@ const initialData = [
   { time: '2018-12-29', value: 23.92 },
   { time: '2018-12-30', value: 22.68 },
   { time: '2018-12-31', value: 22.67 }
-]
+] */
 
 export const ChartsSection = () => {
   return (
@@ -20,7 +20,7 @@ export const ChartsSection = () => {
       className="flex flex-col [min-height:23.4375rem] overflow-y-auto"
       title='Charts'
     >
-      <ChartComponent
+      {/* <ChartComponent
         data={initialData}
         colors={{
           areaTopColor: 'rgb(47 98 255 / 0%)',
@@ -33,7 +33,7 @@ export const ChartsSection = () => {
           crosshairHorizontalLine: 'rgb(145,145,145)',
           crosshairVerticalLine: 'rgb(145 145 145)'
         }}
-      />
+      /> */}
     </SectionLayout>
   )
 }

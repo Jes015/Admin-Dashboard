@@ -11,7 +11,11 @@ const getFrontRoutes = () => {
     help: { name: 'Help', path: '/help' }
   } as const
 
-  return { statics }
+  const dynamics = {
+    user: (userId: string) => `/user/${userId}`
+  }
+
+  return { statics, dynamics }
 }
 
 export const frontRoutes = getFrontRoutes()

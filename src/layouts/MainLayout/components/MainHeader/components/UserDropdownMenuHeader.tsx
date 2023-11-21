@@ -1,3 +1,4 @@
+'use client'
 import { PersonIcon } from '@radix-ui/react-icons'
 import { DropdownMenu, IconButton } from '@radix-ui/themes'
 

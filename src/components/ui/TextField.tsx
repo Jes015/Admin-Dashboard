@@ -2,24 +2,42 @@ import { InputLayout } from '@/layouts'
 import { type Icon } from '@/models'
 import { TextField as DefaultTextField } from '@radix-ui/themes'
 
-interface Props {
-  Icon: Icon
-  label: string
-  placeholder: string
-  onChange: React.ChangeEventHandler<HTMLInputElement>
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  className?: string
+  onChange?: React.ChangeEventHandler<HTMLInputElement>
 }
 
-export const TextField: React.FC<Props> = ({ Icon, label, placeholder, onChange }) => {
+interface Props {
+  Icon?: Icon
+  label?: string
+  placeholder: string
+  error?: string
+  inputProps?: InputProps
+  size?: '1' | '2' | '3'
+}
+
+export const TextField: React.FC<Props> = ({ Icon, label, placeholder, error, inputProps, size }) => {
   return (
     <InputLayout
-      label={label}
+      {...{ label, error }}
     >
-      <DefaultTextField.Root>
-        <DefaultTextField.Slot>
-          <Icon />
-        </DefaultTextField.Slot>
+      <DefaultTextField.Root {...{ size }}>
+        {
+          Icon != null &&
+          <DefaultTextField.Slot>
+            <Icon />
+          </DefaultTextField.Slot>
+        }
         <DefaultTextField.Input
-          {...{ placeholder, onChange }}
+          {
+          ...{
+            placeholder,
+            size,
+            onChange: inputProps?.onChange,
+            className: inputProps?.className,
+            type: inputProps?.type
+          }
+          }
         />
       </DefaultTextField.Root>
     </InputLayout>

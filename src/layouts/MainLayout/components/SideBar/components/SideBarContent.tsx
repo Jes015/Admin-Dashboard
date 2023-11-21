@@ -3,6 +3,7 @@ import { useRouting } from '@/hooks'
 import { sideBarSections } from '@/layouts/MainLayout/components/SideBar/models'
 import { Badge } from '@radix-ui/themes'
 import Link from 'next/link'
+import { Fragment } from 'react'
 
 export const SideBarContent = () => {
   const { currentPathname } = useRouting()
@@ -11,10 +12,10 @@ export const SideBarContent = () => {
     <div>
       {
         sideBarSections.map((section) => (
-          <>
-          <Badge className='mb-2' color='indigo'>
-            <span>{section.title}</span>
-          </Badge>
+          <Fragment key={section.title}>
+            <Badge className='mb-2' color='indigo'>
+              <span>{section.title}</span>
+            </Badge>
             <ul>
               {section.routes.map((route) => (
                 <li key={route.name}>
@@ -34,7 +35,7 @@ export const SideBarContent = () => {
                 </li>
               ))}
             </ul>
-          </>
+          </Fragment>
         ))
       }
     </div>
