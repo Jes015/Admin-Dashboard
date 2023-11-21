@@ -1,15 +1,16 @@
-import { Sheet } from '@/components'
+import { Link, Sheet } from '@/components'
+import { frontRoutes } from '@/models'
 import { Badge } from '@radix-ui/themes'
 import Image from 'next/image'
 
 interface Props {
   name: string
 }
-
 export const User: React.FC<Props> = ({ name }) => {
   return (
         <Sheet
-            as='a'
+            component={Link as React.FC<unknown>}
+            href={frontRoutes.dynamics.user(name)}
             className="inline-flex flex-col !p-0 hover:bg-backgroundCurrent cursor-pointer"
         >
             <header>

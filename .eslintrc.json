@@ -5,7 +5,8 @@
       "extends": "standard-with-typescript",
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "off",
-        "no-multiple-empty-lines": "off"
+        "no-multiple-empty-lines": "off",
+        "@typescript-eslint/no-misused-promises": "off"
       }
     }
   ],

@@ -1,3 +1,4 @@
+'use client'
 import { ChatBubbleIcon } from '@radix-ui/react-icons'
 import { IconButton, Popover, Text } from '@radix-ui/themes'
 
