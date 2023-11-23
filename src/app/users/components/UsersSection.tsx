@@ -1,4 +1,5 @@
 import { FilterByCategory, TextFieldUser, User } from '@/app/users/components'
+import { AddUserModal } from '@/components'
 import { SectionLayout } from '@/layouts'
 import { Button } from '@radix-ui/themes'
 
@@ -11,16 +12,16 @@ export const UsersSection = () => {
           className='flex flex-col flex-grow'
           itemsContainerClassName='flex gap-2 pt-1 h-full'
         >
-            <TextFieldUser />
-            <FilterByCategory label='Holaa' />
+          <TextFieldUser />
+          <FilterByCategory label='Holaa' />
         </SectionLayout>
         <SectionLayout
           title='Actions'
           className='flex flex-col'
           itemsContainerClassName='flex gap-2 pt-1 h-full items-center'
         >
-            <Button variant='soft'>Add user</Button>
-            <Button variant='soft' color='red'>Add user</Button>
+          <AddUserModal />
+          <Button variant='soft' color='red'>Add user</Button>
         </SectionLayout>
       </div>
       <SectionLayout

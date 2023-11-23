@@ -1,10 +1,10 @@
 'use client'
 import { Input, TextField } from '@/components'
 import { InputLayout } from '@/layouts'
+import { userFormSchema, type UserFormSchema } from '@/models'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Button, Select } from '@radix-ui/themes'
 import { useForm } from 'react-hook-form'
-import { userFormSchema, type UserFormSchema } from './models'
 
 interface Props {
   formDefaultValues: UserFormSchema

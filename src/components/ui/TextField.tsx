@@ -10,7 +10,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 interface Props {
   Icon?: Icon
   label?: string
-  placeholder: string
+  placeholder?: string
   error?: string
   inputProps?: InputProps
   size?: '1' | '2' | '3'
@@ -36,7 +36,8 @@ export const TextField: React.FC<Props> = ({ Icon, label, placeholder, error, in
             onChange: inputProps?.onChange,
             className: inputProps?.className,
             type: inputProps?.type,
-            inputProps
+            defaultValue: inputProps?.defaultValue,
+            value: inputProps?.value
           }
           }
         />
