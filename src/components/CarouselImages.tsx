@@ -1,6 +1,5 @@
 'use client'
-import { Carousel, Sheet } from '@/components'
-import Image from 'next/image'
+import { Carousel, Image, Sheet } from '@/components'
 
 export const CarouselImages = () => {
   return (
@@ -8,14 +7,13 @@ export const CarouselImages = () => {
             {Array(4).fill(null).map((_, index) => (
                 <Carousel.Item key={index} itemIndex={index}>
                     <Sheet
-                        className='!p-0 self-start flex-grow'
+                        className='!p-0 self-start flex-grow w-full'
                     >
                         <Image
                             src='/cow.jpg'
                             alt="Cow image"
-                            width={100}
-                            height={100}
-                            className='w-full h-full'
+                            width={300}
+                            height={300}
                         />
                     </Sheet>
                 </Carousel.Item>
