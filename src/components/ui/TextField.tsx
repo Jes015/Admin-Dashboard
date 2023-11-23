@@ -35,7 +35,8 @@ export const TextField: React.FC<Props> = ({ Icon, label, placeholder, error, in
             size,
             onChange: inputProps?.onChange,
             className: inputProps?.className,
-            type: inputProps?.type
+            type: inputProps?.type,
+            inputProps
           }
           }
         />

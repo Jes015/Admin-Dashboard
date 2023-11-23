@@ -2,7 +2,7 @@ import { UsersSection } from './components'
 
 const DashboardPage = () => {
   return (
-    <div>
+    <div className='h-full'>
       <UsersSection />
     </div>
   )
