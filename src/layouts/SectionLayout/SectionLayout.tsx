@@ -4,11 +4,12 @@ import styles from './sectionLayout.module.css'
 
 interface Props {
   title?: string
-  className?: string
+  className?: React.HTMLAttributes<HTMLDivElement>['className']
   children: React.ReactNode
+  itemsContainerClassName?: React.HTMLAttributes<HTMLDivElement>['className']
 }
 
-export const SectionLayout: React.FC<Props> = ({ className, children, title }) => {
+export const SectionLayout: React.FC<Props> = ({ className, children, title, itemsContainerClassName }) => {
   return (
     <Sheet
       as='section'
@@ -28,7 +29,13 @@ export const SectionLayout: React.FC<Props> = ({ className, children, title }) =
       >
         <Heading size='4' as='h3'>{title}</Heading>
       </header>
-      <div className='p-2 pt-0'>
+      <div className={
+        [
+          'p-2 pt-0',
+          itemsContainerClassName
+        ].join(' ')
+      }
+      >
         {children}
       </div>
     </Sheet>

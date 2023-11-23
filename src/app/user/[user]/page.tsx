@@ -22,7 +22,17 @@ const UserPage: React.FC<Props> = ({ params: { user } }) => {
       <Sheet
         className='flex-grow relative'
       >
-        <UserForm />
+        <UserForm
+          formDefaultValues={{
+            name: user,
+            color: 'Azul',
+            description: 'la vaca mas linda del mundo',
+            estado: 'viva',
+            hierro: 'ACCR34',
+            peso: 2342,
+            propietario: 'Victor'
+          }}
+        />
       </Sheet>
     </div>
   )

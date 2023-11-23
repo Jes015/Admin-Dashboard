@@ -1,20 +1,26 @@
 'use client'
 import { Input, TextField } from '@/components'
 import { InputLayout } from '@/layouts'
+import { userFormSchema, type UserFormSchema } from '@/models'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Button, Select } from '@radix-ui/themes'
 import { useForm } from 'react-hook-form'
-import { userFormSchema, type UserFormSchema } from './models'
 
-export const UserForm = () => {
+interface Props {
+  formDefaultValues: UserFormSchema
+}
+
+export const UserForm: React.FC<Props> = ({ formDefaultValues }) => {
   const {
-    handleSubmit
+    handleSubmit,
+    register
   } = useForm<UserFormSchema>({
+    defaultValues: formDefaultValues,
     resolver: zodResolver(userFormSchema)
   })
 
-  const handleOnSubmit = () => {
-    console.log('submit')
+  const handleOnSubmit = (data: unknown) => {
+    console.log('submit', data)
   }
 
   return (
@@ -31,6 +37,7 @@ export const UserForm = () => {
           label='Hierro'
           placeholder='AX23'
           inputProps={{
+            ...register('hierro')
           }}
         />
 
@@ -38,6 +45,7 @@ export const UserForm = () => {
           label='Color'
           placeholder='Blanco, marron, negro...'
           inputProps={{
+            ...register('color')
           }}
         />
 
@@ -46,24 +54,25 @@ export const UserForm = () => {
 
           placeholder='Blanco, marron, negro...'
           inputProps={{
-            type: 'number'
+            type: 'number',
+            ...register('peso')
           }}
         />
 
         <TextField
           label='Propietario'
-
           placeholder='Propietario'
           inputProps={{
-            type: 'number'
+            type: 'number',
+            ...register('propietario')
           }}
         />
         <TextField
           label='Peso'
-
           placeholder='Blanco, marron, negro...'
           inputProps={{
-            type: 'number'
+            type: 'number',
+            ...register('peso')
           }}
         />
         <InputLayout label='Estado'>

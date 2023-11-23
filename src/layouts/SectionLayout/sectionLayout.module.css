@@ -5,12 +5,15 @@
     animation-timeline: scroll();
     animation-range: 0 6rem;
     border-bottom: 0.1rem solid transparent;
+    background-color: #1a191b9a;
+    backdrop-filter: blur(8px);
+    border-bottom-color: rgba(159, 166, 173, 0.16);
 }
 
 @keyframes changeBackgroundColor {
     to {
-        background-color: #1a191b9a;
-        backdrop-filter: blur(8px);
-        border-bottom-color: rgba(159, 166, 173, 0.16);
+        background-color: #3b393d2c;
+        backdrop-filter: blur(10px);
+        border-bottom-color: rgba(81, 85, 88, 0.16);
     }
 }

@@ -10,4 +10,7 @@ export const userFormSchema = ZValidator.object({
   estado: ZValidator.string().min(3)
 })
 
+export const userFormSchemaPartial = userFormSchema.partial()
+
+export type UserFormSchemaPartial = ZValidator.infer<typeof userFormSchemaPartial>
 export type UserFormSchema = ZValidator.infer<typeof userFormSchema>

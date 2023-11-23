@@ -4,7 +4,9 @@ import { useState } from 'react'
 import styles from './image.module.css'
 
 interface ImageProps extends DefaultImageProps {
+  lazy: boolean
 }
+
 export const Image: React.FC<ImageProps> = (props) => {
   const [isLoading, setIsLoading] = useState(true)
 
@@ -40,6 +42,7 @@ export const Image: React.FC<ImageProps> = (props) => {
         }
         onLoadStart={handleOnLoadStart}
         onLoad={handleOnLoad}
+        loading={props.lazy ? 'lazy' : 'eager'}
       />
     </div>
   )
