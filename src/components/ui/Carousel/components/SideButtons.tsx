@@ -1,8 +1,15 @@
-'use client'
 import { PlayIcon } from '@/assets/Icons'
 import { useCarouselState } from '../hooks/useCarouselState'
 
-export const SideButtons = () => {
+interface AriaLabels {
+  rightButton?: string
+  leftButton?: string
+}
+interface Props {
+  ariaLabels?: AriaLabels
+}
+
+export const SideButtons: React.FC<Props> = ({ ariaLabels }) => {
   const { itemsLength, actualItemIndex, previousItem, nextItem } = useCarouselState()
 
   const handleOnLeftClick = () => {
@@ -21,10 +28,11 @@ export const SideButtons = () => {
                     actualItemIndex !== 0 &&
                     (
                         <button
-                            className="z-10 [filter:drop-shadow(0px_0px_6px_rgb(25_25_25_/_0.5))]"
+                            aria-label={ariaLabels?.leftButton}
+                            className="z-10 [filter:drop-shadow(0px_0px_6px_rgb(25_25_25_/_0.5))] focus-visible:outline focus-visible:outline-emerald-800"
                             onClick={handleOnLeftClick}
                         >
-                            <PlayIcon className='rotate-180 w-5 h-5' />
+                            <PlayIcon className='rotate-180 w-5 h-5' aria-hidden />
                         </button>
                     )
                 }
@@ -35,10 +43,11 @@ export const SideButtons = () => {
                     actualItemIndex !== itemsLength &&
                     (
                         <button
-                        className="z-10 [filter:drop-shadow(0px_0px_6px_rgb(25_25_25_/_0.5))]"
+                            aria-label={ariaLabels?.rightButton}
+                            className="z-10 [filter:drop-shadow(0px_0px_6px_rgb(25_25_25_/_0.5))] focus-visible:outline focus-visible:outline-emerald-800"
                             onClick={handleOnRightClick}
                         >
-                            <PlayIcon className='w-5 h-5'/>
+                            <PlayIcon className='w-5 h-5' aria-hidden />
                         </button>
                     )
                 }

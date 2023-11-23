@@ -6,7 +6,7 @@ export const CarouselImages = () => {
   return (
         <Carousel itemsLength={4} itemStartIndex={2} className='rounded-md'>
             {Array(4).fill(null).map((_, index) => (
-                <Carousel.Item key={index}>
+                <Carousel.Item key={index} itemIndex={index}>
                     <Sheet
                         className='!p-0 self-start flex-grow'
                     >
@@ -20,7 +20,15 @@ export const CarouselImages = () => {
                     </Sheet>
                 </Carousel.Item>
             ))}
-            <Carousel.SideButtons />
+            <Carousel.SideButtons
+                ariaLabels={{
+                  leftButton: 'View previous image',
+                  rightButton: 'View next image'
+                }}
+            />
+            <Carousel.BottomButtons
+                ariaLabelType='image'
+            />
         </Carousel>
   )
 }
