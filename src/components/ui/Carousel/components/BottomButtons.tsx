@@ -12,7 +12,7 @@ export const BottomButtons: React.FC<Props> = ({ ariaLabelType }) => {
 
   return (
     <div className='absolute bottom-0 left-0 w-full flex justify-center gap-1 pb-1'>
-      <div className='absolute z-[0] bottom-[-10px] left-0 w-[100%] h-[250%] bg-red-500 [background:linear-gradient(0deg,_rgba(0,0,0,1)_0%,_rgba(30,215,96,0)_100%)]' />
+      <div className='absolute z-[0] bottom-[-15px] left-0 w-[100%] h-[280%] bg-red-500 [background:linear-gradient(0deg,_rgba(0,0,0,1)_0%,_rgba(30,215,96,0)_100%)]' />
       {Array(itemsLength + 1).fill(null).map((_, index) => (
         <button
           key={index}
