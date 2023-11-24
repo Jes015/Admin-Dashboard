@@ -13,7 +13,7 @@ export const LatestSearchesSection = () => {
                 <Table.Header>
                     <Table.Row isHeader>
                         <Table.Cell>Search</Table.Cell>
-                        <Table.Cell>Status</Table.Cell>
+                        <Table.Cell>Type</Table.Cell>
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>
@@ -27,7 +27,7 @@ export const LatestSearchesSection = () => {
                                     Alonso
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Badge color='brown'>Status</Badge>
+                                    <Badge color='brown'>User</Badge>
                                 </Table.Cell>
                             </Table.Row>
                         ))

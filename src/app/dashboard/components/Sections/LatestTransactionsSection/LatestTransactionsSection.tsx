@@ -5,7 +5,7 @@ import { Avatar, Badge } from '@radix-ui/themes'
 export const LatestTransactionsSection = () => {
   return (
         <SectionLayout
-            className="flex flex-col [min-height:23.4375rem] overflow-y-auto"
+            className="flex flex-col [min-height:23.4375rem]"
             title='Latest Transactions'
         >
             <Table>
