@@ -14,7 +14,7 @@ export const SectionLayout: React.FC<Props> = ({ className, children, title, ite
     <Sheet
       as='section'
       className={[
-        '!p-0',
+        '!p-0 z-10 scroll',
         className
       ].join(' ')
       }

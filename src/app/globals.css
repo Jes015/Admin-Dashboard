@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.scroll {
+    overflow: auto;
+    --sb-track-color: transparent;
+    --sb-thumb-color: #504d53b0;
+    --sb-size: 9px;
+
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    
+}
+
+.scroll::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 1px;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #7b7780;
+}
