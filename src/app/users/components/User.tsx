@@ -12,7 +12,7 @@ export const User: React.FC<Props> = ({ name }) => {
         <Sheet
             component={Link as React.FC<unknown>}
             href={frontRoutes.dynamics.user(name)}
-            className="inline-flex flex-col !p-0  hover:bg-backgroundCurrent cursor-pointer flex-shrink-0"
+            className="inline-flex flex-col !p-0  hover:bg-backgroundCurrent cursor-pointer flex-shrink-0 transition-colors"
         >
             <header>
                 <Image

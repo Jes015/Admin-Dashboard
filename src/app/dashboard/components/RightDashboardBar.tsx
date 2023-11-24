@@ -1,4 +1,4 @@
-import { RightInfoCard } from '@/app/dashboard/components'
+import { InfoCard } from '@/components'
 import { frontRoutes } from '@/models'
 
 export const RightDashboardBar = () => {
@@ -8,7 +8,7 @@ export const RightDashboardBar = () => {
     >
       {
         Array(2).fill(null).map((_, index) => (
-          <RightInfoCard
+          <InfoCard
             key={index}
             title='How to use the new version of the admin dashboard?'
             subTitle='Take 4 minutes to learn'
