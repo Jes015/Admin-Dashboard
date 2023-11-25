@@ -4,6 +4,7 @@ import { Cell, Row } from './components'
 interface Props {
   children: React.ReactNode
 }
+
 export const Table = ({ children }: Props) => {
   return (
     <TableRoot>
