@@ -1,7 +1,6 @@
-import { Link, Sheet } from '@/components'
+import { Image, Link, Sheet } from '@/components'
 import { frontRoutes } from '@/models'
 import { Badge } from '@radix-ui/themes'
-import Image from 'next/image'
 
 interface Props {
   name: string
@@ -20,6 +19,7 @@ export const User: React.FC<Props> = ({ name }) => {
                     alt="cow image"
                     width={150}
                     height={150}
+                    loading='eager'
                 />
             </header>
             <footer

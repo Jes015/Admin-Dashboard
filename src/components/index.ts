@@ -1,4 +1,3 @@
-export * from './CarouselImages'
-export * from './InfoCard'
+export * from './GlobalLoader/GlobalLoader'
 export * from './ui'
 

@@ -12,6 +12,7 @@ const config: Config = {
       colors: {
         primaryBackground: '#1a191b',
         line: 'rgba(159, 166, 173, 0.16)',
+        tprimary: 'rgb(238, 238, 240)',
         tsecondary: 'rgb(185,185,185)',
         icon: 'rgb(145,145,145)',
         backgroundHover: 'rgb(201 201 201 / .06)',

@@ -1,5 +1,5 @@
 import { Sheet } from '@/components'
-import { SideBarContent, SideBarHeader } from './components'
+import { SideBarContent } from './components/SideBarContent'
 
 export const SideBar = () => {
   return (
@@ -7,7 +7,6 @@ export const SideBar = () => {
         as='aside'
         className='h-full w-full overflow-y-auto'
       >
-        <SideBarHeader />
         <SideBarContent />
       </Sheet>
   )

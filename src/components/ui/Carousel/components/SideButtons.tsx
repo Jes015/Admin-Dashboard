@@ -1,3 +1,4 @@
+'use client'
 import { PlayIcon } from '@/assets/Icons'
 import { useCarouselState } from '../hooks/useCarouselState'
 

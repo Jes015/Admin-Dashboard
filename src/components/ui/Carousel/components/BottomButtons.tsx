@@ -1,3 +1,4 @@
+'use client'
 import { useCarouselState } from '../hooks/useCarouselState'
 
 interface Props {
