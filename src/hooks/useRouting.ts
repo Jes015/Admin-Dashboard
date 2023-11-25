@@ -1,4 +1,5 @@
 'use client'
+import { globalLoaderStateService } from '@/components/GlobalLoader/services'
 import { usePathname, useRouter } from 'next/navigation'
 
 export const useRouting = () => {
@@ -7,9 +8,11 @@ export const useRouting = () => {
 
   const goBack = () => {
     navigation.back()
+    globalLoaderStateService.sendMessage({ detail: true })
   }
   const goForward = () => {
     navigation.forward()
+    globalLoaderStateService.sendMessage({ detail: true })
   }
 
   const currentPathnameFormatted = currentPathname.slice(1)

@@ -1,8 +1,8 @@
 'use client'
+import { Link } from '@/components'
 import { useRouting } from '@/hooks'
 import { sideBarSections } from '@/layouts/MainLayout/components/SideBar/models'
 import { Badge } from '@radix-ui/themes'
-import Link from 'next/link'
 import { Fragment } from 'react'
 
 export const SideBarContent = () => {
@@ -19,7 +19,7 @@ export const SideBarContent = () => {
             <ul>
               {section.routes.map((route) => (
                 <li key={route.name}>
-                  <Link href={route.path}>
+                  <Link className='text-tprimary no-underline' href={route.path}>
                     <div
                       className={
                         [

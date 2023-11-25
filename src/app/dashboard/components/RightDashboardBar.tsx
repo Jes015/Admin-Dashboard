@@ -1,4 +1,4 @@
-import { InfoCard } from '@/components'
+import { InfoCard } from '@/components/InfoCard'
 import { frontRoutes } from '@/models'
 
 export const RightDashboardBar = () => {

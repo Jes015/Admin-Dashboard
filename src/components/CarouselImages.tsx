@@ -2,7 +2,7 @@
 import { Carousel, Image, Sheet } from '@/components'
 
 export const CarouselImages = () => {
-  const itemStartIndex = 2
+  const itemStartIndex = 0
   const itemsLength = 4
 
   return (
@@ -21,7 +21,7 @@ export const CarouselImages = () => {
                                 alt="Cow image"
                                 width={300}
                                 height={300}
-                                lazy={index !== itemStartIndex}
+                                loading={index !== itemStartIndex ? 'lazy' : 'eager'}
                             />
                         </Sheet>
                     </Carousel.Item>

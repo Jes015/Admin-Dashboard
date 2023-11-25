@@ -1,3 +1,4 @@
+import { GlobalComponents } from '@/components/GlobalComponents'
 import { Header, SideBar } from './components'
 
 interface Props {
@@ -15,6 +16,7 @@ export const MainLayout: React.FC<Props> = ({ children }) => {
           {children}
         </main>
       </div>
+      <GlobalComponents />
     </div>
   )
 }
