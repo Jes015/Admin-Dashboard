@@ -17,9 +17,13 @@ export const useGlobalLoader = () => {
 
   useEffect(() => {
     globalLoaderStateService.listenEvent((data) => {
+      let newVisibility: boolean | undefined
+
       if (typeof data?.detail === 'boolean') {
-        toggleLoaderVisibility(data.detail)
+        newVisibility = data.detail
       }
+
+      toggleLoaderVisibility(newVisibility)
     })
 
     return () => {
