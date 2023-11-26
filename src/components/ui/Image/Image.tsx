@@ -7,6 +7,8 @@ interface ImageProps extends DefaultImageProps {
   loading: 'lazy' | 'eager'
 }
 
+export type PartialImageProps = Partial<ImageProps>
+
 export const Image: React.FC<ImageProps> = (props) => {
   const [isLoading, setIsLoading] = useState(true)
 
@@ -22,7 +24,7 @@ export const Image: React.FC<ImageProps> = (props) => {
     <div
       className={
         [
-          'bg-[rgba(255,255,255,.008)] relative h-full w-full !overflow-hidden',
+          'bg-[rgba(255,255,255,.008)] relative !h-full !w-full !overflow-hidden',
           isLoading ? styles.image : ''
         ].join(' ')
       }
@@ -36,8 +38,9 @@ export const Image: React.FC<ImageProps> = (props) => {
         {...props}
         className={
           [
-            'object-cover w-full h-full [transition:opacity_0.7s_ease]',
-            isLoading ? 'opacity-0' : ''
+            'object-cover text-center w-full h-full [object-position:center] [transition:opacity_0.7s_ease]',
+            isLoading ? 'opacity-0' : '',
+            props.className
           ].join(' ')
         }
         onLoadStart={handleOnLoadStart}
