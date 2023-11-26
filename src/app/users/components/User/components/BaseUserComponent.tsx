@@ -1,19 +1,15 @@
 import { Image, Link, Sheet } from '@/components'
 import { frontRoutes } from '@/models'
-import { Badge } from '@radix-ui/themes'
 
-interface Props {
-  name: string
-}
-
-export const User: React.FC<Props> = ({ name }) => {
+export const BaseUserComponent = () => {
+  const name = 'Alonso'
   return (
         <Sheet
             component={Link as React.FC<unknown>}
             href={frontRoutes.dynamics.user(name)}
-            className="inline-flex flex-col !p-0  hover:bg-backgroundCurrent cursor-pointer flex-shrink-0 transition-colors"
+            className="inline-flex flex-col !p-0  hover:bg-backgroundCurrent cursor-pointer flex-shrink-0 transition-colors no-underline"
         >
-            <header>
+            <header className='[max-width:8.5rem] [max-height:8.5rem] w-full h-full'>
                 <Image
                     src='/cow.jpg'
                     alt="cow image"
@@ -25,14 +21,9 @@ export const User: React.FC<Props> = ({ name }) => {
             <footer
                 className='flex flex-col p-2'
             >
-                <span className='[text-overflow:elipsis] overflow-hidden'>
+                <span className='[text-overflow:elipsis] overflow-hidden text-tprimary'>
                     {name}
                 </span>
-                <div>
-                    <Badge size='1'>
-                        10.000/M
-                    </Badge>
-                </div>
             </footer>
         </Sheet>
   )
