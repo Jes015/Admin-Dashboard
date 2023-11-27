@@ -22,7 +22,8 @@ export const AddUserModalForm = () => {
                 label='Nombre'
                 placeholder='La niña'
                 inputProps={{
-                  ...register('name')
+                  ...register('name'),
+                  autoComplete: 'cow-name'
                 }}
             />
             <TextField
@@ -56,7 +57,8 @@ export const AddUserModalForm = () => {
                 placeholder='Propietario'
                 inputProps={{
                   type: 'number',
-                  ...register('propietario')
+                  ...register('propietario'),
+                  autoComplete: 'name'
                 }}
             />
             <TextField

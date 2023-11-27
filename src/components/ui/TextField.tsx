@@ -37,7 +37,8 @@ export const TextField: React.FC<Props> = ({ Icon, label, placeholder, error, in
             className: inputProps?.className,
             type: inputProps?.type,
             defaultValue: inputProps?.defaultValue,
-            value: inputProps?.value
+            value: inputProps?.value,
+            autoComplete: inputProps?.autoComplete
           }
           }
         />

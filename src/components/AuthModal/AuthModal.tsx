@@ -32,7 +32,7 @@ export const AuthModal = () => {
                       color='indigo'
                       variant='ghost'
                       size='1'
-                      className='hover:bg-transparent hover:underline !cursor-pointer outline-none focus:outline-none focus-within:outline'
+                      className='hover:bg-transparent hover:underline !cursor-pointer outline'
                       aria-label={`Change auth method to ${contraryAuthModal}`}
                       onClick={handleOnClickForToggleModalType}
                     >
