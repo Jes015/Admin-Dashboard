@@ -20,14 +20,25 @@ export const ModalContent: React.FC<Props> = ({ children, sectionLayout, display
             <SectionLayout
                 {...sectionLayout}
                 headerButton={
-                    displayCloseButton &&
-                    (
-                        <DialogClose>
-                            <Button variant="soft" color="gray">
-                                Close
-                            </Button>
-                        </DialogClose>
-                    )
+                    <>
+                        {
+                            (displayCloseButton && sectionLayout == null) &&
+                            (
+                                <DialogClose>
+                                    <Button variant="soft" color="gray">
+                                        Close
+                                    </Button>
+                                </DialogClose>
+                            )
+                        }
+                        {
+                            sectionLayout.headerButton != null &&
+                            (
+                              sectionLayout.headerButton
+                            )
+                        }
+
+                    </>
                 }
                 className={
                     [
