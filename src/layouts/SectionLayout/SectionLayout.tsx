@@ -1,11 +1,10 @@
 import { Sheet } from '@/components'
+import { type BaseComponentProps } from '@/models'
 import { Heading } from '@radix-ui/themes'
 import styles from './sectionLayout.module.css'
 
-interface SectionLayoutProps {
+interface SectionLayoutProps extends BaseComponentProps {
   title?: string
-  className?: React.HTMLAttributes<HTMLDivElement>['className']
-  children: React.ReactNode
   itemsContainerClassName?: React.HTMLAttributes<HTMLDivElement>['className']
   headerButton?: React.ReactNode
 }

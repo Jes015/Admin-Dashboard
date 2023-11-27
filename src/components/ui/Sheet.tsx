@@ -1,9 +1,8 @@
+import { type BaseComponentProps } from '@/models'
 import { forwardRef } from 'react'
 
-interface SheetProps {
+interface SheetProps extends BaseComponentProps {
   as?: keyof JSX.IntrinsicElements
-  children: React.ReactNode
-  className?: string
   href?: string
   component?: React.FC<unknown>
 }

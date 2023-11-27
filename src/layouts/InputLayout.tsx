@@ -1,10 +1,11 @@
 'use client'
+import { type BaseComponentProps } from '@/models'
 import { Text } from '@radix-ui/themes'
-interface Props {
+interface Props extends BaseComponentProps {
   label?: string
-  children: React.ReactNode
   error?: string
 }
+
 export const InputLayout: React.FC<Props> = ({ children, label, error }) => {
   return (
     <div className='flex flex-col justify-start'>

@@ -1,11 +1,10 @@
 'use client'
 import { globalLoaderStateService } from '@/components/GlobalLoader/services'
+import { type BaseComponentProps } from '@/models'
 import DefaultLink, { type LinkProps } from 'next/link'
 import { forwardRef } from 'react'
 
-interface Props extends LinkProps {
-  children: React.ReactNode
-  className?: string
+interface Props extends BaseComponentProps, LinkProps {
 }
 
 export const Link: React.FC<Props> = forwardRef<HTMLAnchorElement, Props>(

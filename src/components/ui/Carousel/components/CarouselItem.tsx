@@ -1,10 +1,9 @@
 'use client'
+import { type BaseComponentProps } from '@/models'
 import { useCarouselState } from '../hooks/useCarouselState'
 
-interface Props {
-  children: React.ReactNode
+interface Props extends BaseComponentProps {
   itemIndex: number
-  className?: React.HTMLProps<HTMLElement>['className']
 }
 
 export const CarouselItem: React.FC<Props> = ({ children, className, itemIndex }) => {

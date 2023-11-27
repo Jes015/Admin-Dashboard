@@ -1,10 +1,9 @@
 'use client'
+import { type BaseComponentProps } from '@/models'
 import { BottomButtons, CarouselItem, SideButtons } from './components'
 import { CarouselProvider } from './context'
 
-interface Props {
-  children: React.ReactNode
-  className?: React.HTMLProps<HTMLElement>['className']
+interface Props extends BaseComponentProps {
   itemsLength: number
   itemStartIndex?: number
   ariaLabel?: string

@@ -1,5 +1,6 @@
 import { inter } from '@/assets'
 import { MainLayout } from '@/layouts'
+import { type BaseComponentType } from '@/models'
 import { AuthProvider } from '@/services/providers'
 import type { Metadata } from 'next'
 import './globals.css'
@@ -9,11 +10,7 @@ export const metadata: Metadata = {
   description: 'manage your finances'
 }
 
-export default function RootLayout ({
-  children
-}: {
-  children: React.ReactNode
-}) {
+const RootLayout: BaseComponentType = ({ children }) => {
   return (
     <html lang="en">
       <body className={[inter.className, 'dark'].join(' ')}>
@@ -26,3 +23,5 @@ export default function RootLayout ({
     </html>
   )
 }
+
+export default RootLayout
