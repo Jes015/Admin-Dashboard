@@ -18,12 +18,16 @@ export const FormSignIn = () => {
         >
             <TextField
                 label='Email'
+                inputProps={{
+                  autoComplete: 'email'
+                }}
                 placeholder='pepe@gmail.com'
             />
             <TextField
                 label='Password'
                 inputProps={{
-                  type: 'password'
+                  type: 'password',
+                  autoComplete: 'current-password'
                 }}
                 placeholder='pepe123'
             />

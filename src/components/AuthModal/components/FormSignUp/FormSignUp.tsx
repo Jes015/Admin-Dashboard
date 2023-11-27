@@ -19,22 +19,30 @@ export const FormSignUp = () => {
       <TextField
         label='Username'
         placeholder='pepe'
+        inputProps={{
+          autoComplete: 'username'
+        }}
       />
       <TextField
         label='Email'
         placeholder='pepe@gmail.com'
+        inputProps={{
+          autoComplete: 'email'
+        }}
       />
       <TextField
         label='Password'
         inputProps={{
-          type: 'password'
+          type: 'password',
+          autoComplete: 'new-password'
         }}
         placeholder='pepe123'
       />
       <TextField
         label='Repeat your password'
         inputProps={{
-          type: 'password'
+          type: 'password',
+          autoComplete: 'new-password'
         }}
         placeholder='pepe123'
       />
