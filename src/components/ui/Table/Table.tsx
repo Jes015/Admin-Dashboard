@@ -1,11 +1,8 @@
+import { type BaseComponentProps } from '@/models'
 import { TableBody, TableHeader, TableRoot } from '@radix-ui/themes'
 import { Cell, Row } from './components'
 
-interface Props {
-  children: React.ReactNode
-}
-
-export const Table = ({ children }: Props) => {
+export const Table = ({ children }: BaseComponentProps) => {
   return (
     <TableRoot>
       {children}

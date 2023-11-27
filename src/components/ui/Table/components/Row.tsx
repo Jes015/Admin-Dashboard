@@ -1,9 +1,9 @@
+import { type BaseComponentProps } from '@/models'
 import { TableRow } from '@radix-ui/themes'
-interface Props {
+interface Props extends BaseComponentProps {
   isHeader?: boolean
-  children: React.ReactNode
-  className?: string
 }
+
 export const Row: React.FC<Props> = ({ children, className, isHeader = false }) => {
   return (
     <TableRow
