@@ -2,14 +2,17 @@ import { Sheet } from '@/components'
 import { Heading } from '@radix-ui/themes'
 import styles from './sectionLayout.module.css'
 
-interface Props {
+interface SectionLayoutProps {
   title?: string
   className?: React.HTMLAttributes<HTMLDivElement>['className']
   children: React.ReactNode
   itemsContainerClassName?: React.HTMLAttributes<HTMLDivElement>['className']
+  headerButton?: React.ReactNode
 }
 
-export const SectionLayout: React.FC<Props> = ({ className, children, title, itemsContainerClassName }) => {
+export type PartialSectionLayoutProps = Partial<SectionLayoutProps>
+
+export const SectionLayout: React.FC<SectionLayoutProps> = ({ className, children, title, itemsContainerClassName, headerButton }) => {
   return (
     <Sheet
       as='section'
@@ -22,12 +25,13 @@ export const SectionLayout: React.FC<Props> = ({ className, children, title, ite
       <header
         className={
           [
-            'sticky top-0 p-2 z-10',
+            'sticky top-0 p-2 z-10 flex items-center justify-between',
             styles.sectionLayout__header
           ].join(' ')
         }
       >
         <Heading size='4' as='h3'>{title}</Heading>
+        {headerButton}
       </header>
       <div className={
         [

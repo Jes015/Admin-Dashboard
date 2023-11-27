@@ -1,7 +1,6 @@
 import { inter } from '@/assets'
 import { MainLayout } from '@/layouts'
-import { Theme } from '@radix-ui/themes'
-import '@radix-ui/themes/styles.css'
+import { AuthProvider } from '@/services/providers'
 import type { Metadata } from 'next'
 import './globals.css'
 
@@ -18,11 +17,11 @@ export default function RootLayout ({
   return (
     <html lang="en">
       <body className={[inter.className, 'dark'].join(' ')}>
-        <Theme appearance="dark" accentColor="indigo" grayColor="mauve" radius="small">
+        <AuthProvider>
           <MainLayout>
             {children}
           </MainLayout>
-        </Theme>
+        </AuthProvider>
       </body>
     </html>
   )
