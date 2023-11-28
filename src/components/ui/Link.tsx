@@ -10,6 +10,9 @@ interface Props extends BaseComponentProps, LinkProps {
 export const Link: React.FC<Props> = forwardRef<HTMLAnchorElement, Props>(
   ({ children, href, className, ...props }, ref) => {
     const handleOnClick = () => {
+      const linkPathname = href
+      const actualPathname = location.pathname
+      if (linkPathname === actualPathname) return
       globalLoaderStateService.sendMessage({ detail: true })
     }
 
