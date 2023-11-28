@@ -3,5 +3,5 @@ export interface AuthContext {
 }
 
 export const defaultAuthContextState: AuthContext = {
-  isAuth: false
+  isAuth: true
 }

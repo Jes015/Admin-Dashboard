@@ -12,7 +12,6 @@ export const useRouting = () => {
   }
   const goForward = () => {
     navigation.forward()
-    globalLoaderStateService.sendMessage({ detail: true })
   }
 
   const currentPathnameFormatted = currentPathname.slice(1)
